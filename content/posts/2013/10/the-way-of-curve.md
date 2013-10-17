@@ -36,7 +36,11 @@ sudo apt-get install llvm
 
 cabal install accelerate-examples
 
-edit /home/hound/.cabal/share/x86_64-linux-ghc-7.6.3/accelerate-cuda-0.13.0.4/cubits/ (add #define __CUDA_ARCH__ 100)
+err: error: identifier "__shfl_xor" is undefined
+
+edit /home/hound/.cabal/share/x86_64-linux-ghc-7.6.3/accelerate-cuda-0.13.0.4/cubits/ (
+  add #define __CUDA_ARCH__ 100
+)
 
 #ifndef __ACCELERATE_CUDA_FUNCTION_H__
 #define __ACCELERATE_CUDA_FUNCTION_H__
