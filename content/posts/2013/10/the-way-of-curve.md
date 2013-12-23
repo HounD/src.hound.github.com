@@ -9,7 +9,11 @@ Ubuntu 12.4.x has too old haskell (ghc 7.4.1)
 package ghc6 not work (install the same ghc)
 
 install ghc 7.6.3 (
-  need libgmp.so.3, sudo apt-get install libgmp3c2
+  need libgmp.so.3, sudo apt-get install libgmp-dev
+  
+  sudo ln -s /usr/lib/x86_64-linux-gnu/libgmp.so.10 /usr/lib/libgmp.so.3
+  sudo ln -s /usr/lib/x86_64-linux-gnu/libgmp.so.10 /usr/lib/libgmp.so
+  
   ./configure 
   make install
   sudo make install
